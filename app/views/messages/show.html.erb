@@ -1,0 +1,56 @@
+<p id="notice"><%= notice %></p>
+
+<% if @user %>
+<p>
+  <b>Старт:</b>
+  <%= @message.start %>
+</p>
+
+<p>
+  <b>Стоп:</b>
+  <%= @message.stop %>
+</p>
+<%end%>
+<p>
+  <b>Частота:</b>
+  <%= @message.every %>
+</p>
+
+<p>
+  <b>Адрес:</b>
+  <%= @message.url %>
+</p>
+
+<p>
+  <b>Текст сообщения:</b>
+  <%= @message.msg %>
+</p>
+<% if @user %>
+<p>
+  <b>Email:</b>
+  <%= @message.email %>
+</p>
+
+<p>
+  <b>Телефон:</b>
+  <%= @message.phone %>
+</p>
+<%end%>
+<p>
+  <b>Логин для форума:</b>
+  <%= @message.login %>
+</p>
+
+<p>
+  <b>Пароль для форума:</b>
+  <%= @message.pass %>
+</p>
+
+<p>
+  <b>Активность:</b>
+  <%= @message.allowed %>
+</p>
+
+
+<%= link_to 'Редактировать', edit_message_path(@message) %> |
+<%= link_to 'Вернуться', messages_path %>

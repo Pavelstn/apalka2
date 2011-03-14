@@ -1,0 +1,22 @@
+<% if flash[:notice] -%>
+  <div id="notice"><%= flash[:notice] %></div>
+<% end -%>
+
+<div class="login-form">
+
+  <% form_tag do %>
+    <table border="0" width="100%">
+      <tr>
+        <td>Логин</td><td><%= text_field_tag :name, params[:name], :class => 'input' %></td>
+      </tr>
+      <tr>
+        <td>Пароль:</td><td><%= password_field_tag :password, params[:password], :class => 'input' %></td>
+      </tr>
+      <tr>
+        <td></td><td><%= submit_tag "    Вход    " %></td>
+      </tr>
+    </table>
+
+<% end %>
+
+</div>

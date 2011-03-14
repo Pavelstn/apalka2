@@ -1,0 +1,16 @@
+<% form_for :user do |form| %>
+  <table border="0" width="100%">
+    <tr>
+      <td>Логин</td><td><%= form.text_field :name,:class => 'input'%></td>
+    </tr>
+    <tr>
+      <td>Пароль</td><td><%= form.password_field :password,:class => 'input'%></td>
+    </tr>
+    <tr>
+      <td>Повтор</td><td><%= form.password_field :password_confirmation, :class => 'input'%></td>
+    </tr>
+    <tr>
+      <td></td><td><%= submit_tag "   Зарегистрироваться   ", :class => "submit" %></td>
+    </tr>
+  </table>
+<% end %>

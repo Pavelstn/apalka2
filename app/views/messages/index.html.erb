@@ -1,0 +1,51 @@
+<%= link_to 'Новая тема', new_message_path %>
+<table border="1">
+  <tr>
+    <% if @user %><th>Пользователь</th>
+    <th>Старт</th>
+    <th>Стоп</th>
+    <%end%>
+    <th>Обновлять каждые</th>
+    <th>Адрес</th>
+    <th>Текст сообщения</th>
+    <%if @user%>
+    <th>Email</th>
+    <th>Телефон</th>
+    
+    <th>Логин для форума</th>
+    <th>Пароль для форума</th>
+    <%end%>
+    <th>Активность</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @messages.each do |message| %>
+  <tr>
+    <%if @user%>
+    <td><%= message.user_id %></td>
+    <td><%= message.start %></td>
+    <td><%= message.stop %></td>
+    <%end%>
+    <td><%= message.every %></td>
+    <td><%= message.url %></td>
+    <td><%= message.msg %></td>
+    <%if @user%>
+    <td><%= message.email %></td>
+    <td><%= message.phone %></td>
+    
+    <td><%= message.login %></td>
+    <td><%= message.pass %></td>
+    <%end%>
+    <td><%= message.allowed %></td>
+    <td><%= link_to 'Показать', message %></td>
+    <td><%= link_to 'Ред.', edit_message_path(message) %></td>
+    <td><%= link_to 'Удалить', message, :confirm => 'Серьезно удалить?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Новая тема', new_message_path %>

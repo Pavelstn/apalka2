@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+    <head> 
+        <title>Продвижение рекламы на кубанском форуме| Управление</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+        <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css" />
+        <%= javascript_include_tag :defaults , :cache => true, :recursive => true%>
+        <%= csrf_meta_tag %>
+    </head> 
+    <body> 
+        <!-- Begin Wrapper --> 
+        <div id="wrapper"> 
+            <!-- Begin Header --> 
+            <div id="header_indor">
+                <div id="headertext_indor">
+                    <h1>Продвижение рекламы на кубанском форуме</h1>
+                    
+
+                 <!---   <h2><div>Список тем|Настройка|Отчеты</div></h2> ------>
+                </div>
+
+                <div id="headerform_indor">
+                    Вы вошли как:<b> <%=session[:user_name]%></b>
+                    <%= link_to "Выход",     :controller => 'login', :action => 'logout' %>
+                    <h3>У Вас на счету <%=session[:user_money] %> рублей</h3>
+                    <h2>|<%= link_to "Список тем", :controller => 'messages', :action => 'index' %>|
+                    <%= link_to "Операции", :controller => 'operations', :action => 'index' %>|</h2>
+
+                </div>
+                <!-------------
+                -------------->
+            </div> 
+            <!-- End Header --> 
+            <!-- Begin Faux Columns --> 
+            <div id="faux"> 
+                <!-- Begin Left Column --> 
+                <div id="leftcolumn">
+                  
+                    <%= yield :layout %>
+                    <div class="clear"> </div>
+                </div>
+                <!-- End Left Column -->
+                <!-- Begin Right Column -->
+                <div id="rightcolumn">
+
+                    <div class="clear"> </div>
+                </div>
+                <!-- End Right Column -->
+            </div>
+            <!-- End Faux Columns -->
+            <!-- Begin Footer -->
+            <!-----   <div id="footer"> This is the Footer </div>   ------>
+            <!-- End Footer -->
+        </div>
+
+        <!-- End Wrapper -->
+
+    </body>
+</html>

@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user_id: 1
+  message_id: 1
+  url: MyText
+  msg: MyText
+  every: 1
+  price: 1.5
+  datetime: 2010-11-17 14:38:21
+
+two:
+  user_id: 1
+  message_id: 1
+  url: MyText
+  msg: MyText
+  every: 1
+  price: 1.5
+  datetime: 2010-11-17 14:38:21

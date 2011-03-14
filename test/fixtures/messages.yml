@@ -1,0 +1,27 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user_id: 1
+  start: 2010-10-31 11:24:34
+  stop: 2010-10-31 11:24:34
+  every: 1
+  url: MyText
+  msg: MyText
+  email: MyString
+  phone: MyString
+  login: MyString
+  pass: MyString
+  allowed: false
+
+two:
+  user_id: 1
+  start: 2010-10-31 11:24:34
+  stop: 2010-10-31 11:24:34
+  every: 1
+  url: MyText
+  msg: MyText
+  email: MyString
+  phone: MyString
+  login: MyString
+  pass: MyString
+  allowed: false

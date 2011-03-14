@@ -1,0 +1,25 @@
+<h2>Список операций</h2>
+<%= will_paginate @operations %>
+<table>
+  <tr>
+    <th>Адрес на сайте</th>
+    <th>Сообщение</th>
+    <th>Частота</th>
+    <th>Стоимость</th>
+    <th>Время</th>
+
+  </tr>
+
+<% @operations.each do |operation| %>
+  <tr>
+
+    <td><%= operation.url %></td>
+    <td><%= operation.msg %></td>
+    <td><%= operation.every %></td>
+    <td><%= operation.price %></td>
+    <td><%= operation.datetime %></td>
+
+  </tr>
+<% end %>
+</table>
+<%= will_paginate @operations %>

@@ -1,0 +1,121 @@
+* { padding: 0; margin: 0; }
+
+body {
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 16px;
+}
+#wrapper { 
+ margin: 0 auto;
+ width: 922px;
+}
+/*
+#faux {
+ background: url(faux-4-2-col.gif);
+ margin-bottom: 0px;
+ overflow: auto; 
+ width: 100%
+}
+*/
+#header, #header_indor {
+ width: 902px;
+ padding: 10px;
+ height: 180px;
+}
+
+#header_indor {
+ height: 80px;
+}
+
+#headertext,#headertext_indor {
+    /*слева*/
+    width: 420px;
+    
+ float: left;
+ color: #333;
+ display: inline;
+ position: relative;
+}
+#headertext_indor {
+    width: 550px;
+}
+#headerform {
+    /*справа*/
+ display: inline;
+ color: #ffffff;
+ float: right;
+ width: 420px;
+ height: 150px;
+  -moz-border-radius:  15px;  /* Firefox */
+    -webkit-border-radius: 15px;  /* Safari/WebKit */
+    border-radius: 15px;  /* Opera; future browsers with CSS3 support */
+    padding: 10px;
+    /*margin: 10px;*/
+    background-color: #454b57;
+    font-size: 18px;
+    vertical-align: middle;
+    line-height: 28px;
+}
+#rightcolumn {
+   
+ display: inline;
+ color: #333;
+ width: 200px;
+ height: 750px;
+ float: right;
+ background: url(/images/awesome_smile.jpg);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+#leftcolumn { 
+ float: left;
+ color: #333;
+/* border: 1px solid red;*/
+ margin:10px;
+ padding:0;
+ width: 680px;
+ display: inline;
+ position: relative;
+}
+#footer { 
+ width: 902px;
+ clear: both;
+ color: #333;
+ background: #ABBEBE;
+ margin: 0px 0px 10px 0px;
+ padding: 10px;
+}
+.clear { clear: both; background: none; }
+
+h1{
+    color: #cc0000;
+}
+h2{
+    color: #000033;
+    margin-top: 15px;
+}
+h3{
+    color: #cc0000;
+    margin-top: 15px;
+}
+h4{
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+p{
+    margin-top: 10px;
+}
+.input{
+    width: 100%;
+}
+#headerform  a{
+    /*color: #cc0000;*/
+    color: #ffffff;
+}
+#registerform{
+    /*visibility:collapse;*/
+}
+.notice{
+    color: #cc0000;
+
+}

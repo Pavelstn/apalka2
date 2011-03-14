@@ -1,0 +1,87 @@
+<%= form_for(@message) do |f| %>
+  <% if @message.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@message.errors.count, "error") %> prohibited this message from being saved:</h2>
+
+      <ul>
+        <% @message.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <% if @user %>
+    <div class="field">
+      <%= f.label :start %><br />
+      <%= f.datetime_select :start %>
+    </div>
+    <div class="field">
+      <%= f.label :stop %><br />
+      <%= f.datetime_select :stop %>
+    </div>
+
+  <div class="field">
+    <%= f.label :every %><br />
+    <%= f.text_field :every %>
+  </div>
+  <div class="field">
+    <%= f.label :url %><br />
+    <%= f.text_field :url %>
+  </div>
+  <div class="field">
+    <%= f.label :msg %><br />
+    <%= f.text_field :msg %>
+  </div>
+
+    <div class="field">
+      <%= f.label :email %><br />
+      <%= f.text_field :email %>
+    </div>
+    <div class="field">
+      <%= f.label :phone %><br />
+      <%= f.text_field :phone %>
+    </div>
+
+  <div class="field">
+    <%= f.label :login %><br />
+    <%= f.text_field :login %>
+  </div>
+  <div class="field">
+    <%= f.label :pass %><br />
+    <%= f.text_field :pass %>
+  </div>
+  <div class="field">
+    <%= f.label :allowed %><br />
+    <%= f.check_box :allowed %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  <%end%>
+
+
+<table border="0">
+  <tr>
+    <td>Адрес объявления </td><td><%= f.text_field :url, :class => "input", :size=>"70"%></td>
+  </tr>
+  <tr>
+    <td>Текст сообщения</td><td><%= f.text_field :msg, :class => "input"%></td>
+  </tr>
+  <tr>
+    <td>Логин для форума</td><td><%= f.text_field :login , :class => "input"%></td>
+  </tr>
+  <tr>
+    <td>Пароль для форума</td><td><%= f.text_field :pass , :class => "input"%></td>
+  </tr>
+  <tr>
+    <td>Обновлять раз в</td><td><%= f.text_field :every, :class => "input"%></td>
+  </tr>
+    <tr>
+    <td>Активировать</td><td><%= f.check_box :allowed %></td>
+  </tr>
+  <tr>
+    <td></td><td><%= submit_tag "Записать", :class => "submit" %></td>
+  </tr>
+</table>
+<% end %>
